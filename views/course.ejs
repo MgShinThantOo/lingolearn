@@ -1,0 +1,128 @@
+<%- include('partials/header'); %>
+<link rel="stylesheet" href="css/course.css">
+
+</head>
+<body>
+
+    <!---------------------------- create course -----------------------------------------> 
+    <div class="create min-vh-100 w-100 position-fixed top-0 d-flex justify-content-center align-items-center fadeIn d-none" id="create_course">
+        <div class="new-content rounded py-4 px-3 shadow-sm">
+            <h5 class="text-center mb-3">Add Course</h5>
+            <form action="">
+                <div class="input-group-sm mb-2 shadow-sm">
+                    <label for="course_name" class="form-label mb-1"><small>Course Name</small></label>
+                    <input type="text" class="form-control" id="course_name" required>
+                </div>
+                <div class="input-group-sm mb-2 shadow-sm">
+                    <label for="course_price" class="form-label mb-1"><small>Course Price</small></label>
+                    <input type="text" class="form-control" id="course_price" required>
+                </div>
+                <div class="input-group-sm mb-2 shadow-sm">
+                    <label for="description" class="form-label fw-bold mb-1"><small>Course Description</small></label
+                    >
+                    <textarea class="form-control" id="description" rows="3" placeholder="Add description about Course" required></textarea>
+                </div>
+                <div class="input-group-sm mb-2 shadow-sm">
+                    <label for="upload" class="form-label mb-1"><small>Upload</small></label>
+                    <input type="file" class="form-control" id="upload" required>
+                </div>
+                <div class="upload-file-show text-center mb-3">
+                    <img src="./photo/download (1).jpg" alt="" class="img-fluid">
+                </div>
+                <div class="d-flex justify-content-end align-items-center">
+                    <div class="btn btn-sm btn-danger me-2" id="cancel_btn">Cancel</div>
+                    <input type="submit" class="btn btn-sm btn-success" name="Create" value="Create">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <section class="main">
+
+        <%- include('partials/menu_bar'); %>
+
+        <!---------------------------- content  ----------------------------------------->
+        <article class="content min-vh-100 course-content">
+            <div class="d-flex justify-content-between align-items-center">
+                <h5 class="">Course</h5>
+                <a href="#" class="btn btn-sm btn-warning text-dark" id="add_course">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <i class="bi bi-plus me-2 fw-medium"></i><small>Add Course</small>
+                    </div>
+                </a>
+            </div>
+            <div class="bg-white shadow-sm mx-2 px-2 py-3 mt-3">
+                <div class="d-flex flex-wrap justify-content-between align-items-center">
+                    <select name="" id="" class="border-0 mt-2">
+                        <option value="1">All</option>
+                        <option value="2">Free</option>
+                        <option value="3">Premium</option>
+                    </select>
+                    <div class="mt-2">
+                        <span class="">Search</span>
+                        <input type="search" class="border-0 px-2" id="filter" placeholder="search for anything">
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-12 col-sm-6 col-md-4 col-xl-3 mt-3">
+                        <a href="course_detail" class="">
+                            <div class="card shadow-sm text-dark">
+                                <img src="../photo/download (1).jpg" alt="" class="img-fluid">
+                                <div class="card-body text-center">
+                                    <h6 class="">Japnese N5</h6>
+                                    <span class="">Description</span> <br>
+                                    <span class="text-success fw-medium">24000 MMK</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-xl-3 mt-3">
+                        <a href="course_detail" class="">
+                            <div class="card shadow-sm text-dark">
+                                <img src="../photo/download (1).jpg" alt="" class="img-fluid">
+                                <div class="card-body text-center">
+                                    <h6 class="">Japnese N5</h6>
+                                    <span class="">Description</span> <br>
+                                    <span class="text-success fw-medium">24000 MMK</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-xl-3 mt-3">
+                        <a href="course_detail" class="">
+                            <div class="card shadow-sm text-dark">
+                                <img src="../photo/download (1).jpg" alt="" class="img-fluid">
+                                <div class="card-body text-center">
+                                    <h6 class="">Japnese N5</h6>
+                                    <span class="">Description</span> <br>
+                                    <span class="text-success fw-medium">24000 MMK</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <%- include('partials/footer'); %>
+
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="js/all.js"></script>
+
+    <script>
+        let addCourse = document.querySelector('#add_course'),
+            createCourse = document.querySelector('#create_course'),
+            cancelBtn = document.querySelector('#cancel_btn');
+
+        addCourse.addEventListener('click', () => {
+            createCourse.classList.remove('d-none');
+        });
+
+        cancelBtn.addEventListener('click', () => {
+            createCourse.classList.add('d-none');
+        })
+    </script>
+</body>
+</html>

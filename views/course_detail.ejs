@@ -1,0 +1,120 @@
+<%- include('partials/header'); %>
+
+</head>
+<body>
+
+    <section class="main">
+
+        <%- include('partials/menu_bar'); %>
+
+        <!---------------------------- content  ----------------------------------------->
+        <article class="content  course-detail-content min-vh-100">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="/course">Course</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Course Details</li>
+                </ol>
+              </nav>
+              <div class="table-container mt-3 py-3 px-2 bg-white shadow-sm">
+                <h5 class="text-center mb-3">Japnese N5</h5>
+                <table id="example" class="display bg-white" style="width:100%">
+                    <thead>
+                        <tr>
+                            <th>Categories</th>
+                            <th>Total NO of Units</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Vocabulary</td>
+                            <td>2</td>
+                            <td>
+                                <a href="/vocabulary" class="text-info text-decoration-underline">more Info</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Grammar/Renshuu A</td>
+                            <td>10</td>
+                            <td>
+                                <a href="/renshuu_A" class="text-info text-decoration-underline">more Info</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Conversation</td>
+                            <td>12</td>
+                            <td>
+                                <a href="/conversation" class="text-info text-decoration-underline">more Info</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Sentence Structure</td>
+                            <td>22</td>
+                            <td>
+                                <a href="/sentence_structure" class="text-info text-decoration-underline">more Info</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Renshuu B,C</td>
+                            <td>17</td>
+                            <td>
+                                <a href="/renshuu_BC" class="text-info text-decoration-underline">more Info</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Exercise</td>
+                            <td>25</td>
+                            <td>
+                                <a href="/exercise" class="text-info text-decoration-underline">more Info</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Kanji</td>
+                            <td>24</td>
+                            <td>
+                                <a href="/kanji" class="text-info text-decoration-underline">more Info</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Revision</td>
+                            <td>8</td>
+                            <td>
+                                <a href="/revision" class="text-info text-decoration-underline">more Info</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Practice</td>
+                            <td>13</td>
+                            <td>
+                                <a href="/practice" class="text-info text-decoration-underline">more Info</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Text Book</td>
+                            <td>12</td>
+                            <td>
+                                <a href="/text_book" class="text-info text-decoration-underline">more Info</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </article>
+
+        <%- include('partials/footer'); %>
+
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="js/all.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            $('#example').DataTable();
+        });
+
+    </script>
+</body>
+</html>
