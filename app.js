@@ -79,5 +79,7 @@ app.get('/help_message', (req,res) => res.render('help_message'))
 
 app.get('/assignrole',(req,res) => res.render('assign_role'))
 
+app.get('/login',(req,res) => res.render('login'))
+
 
 app.listen(3000, () => console.log('server is running at port 3000'))
