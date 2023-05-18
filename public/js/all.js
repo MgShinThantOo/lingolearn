@@ -108,3 +108,11 @@ roleOpen.addEventListener('click',() => {
 roleClose.addEventListener('click',() => {
     toggle(roleOpen,roleClose,role)
 })
+
+// for loading 
+function showLoading(){
+    let up = document.querySelector('#upload_form');
+    let loader = document.querySelector('#loader_box');
+    loader.classList.remove('hide-loading')
+    // up.addEventListener('click',() => loader.classList.remove('hide-loading'))
+}

@@ -139,6 +139,41 @@ nav .title>span{
     font-size: 30px !important;
 }
 
+/* loading  */
+.loader-container{
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10000;
+}
+.loader-box{
+    width: 230px;
+    height: 100px;
+    border-radius: 15px;
+}
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid rgb(0, 0, 0);
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+.hide-loading{
+    display: none !important;
+}
+.show-loadin{
+    display: block;
+}
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 /* sidebar  */
 .sidebar{
     height: 100vh;
